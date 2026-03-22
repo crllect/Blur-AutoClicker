@@ -1,4 +1,10 @@
-# v2.1.0 - 24.02.2026 (d/m/y)
+# v2.1.2 - 22.03.2026 (d/m/y)
+## 🔺 Fix:
+- Drop down selector for Second / Minute / Hour / Day used to always return per second, meaning sub 1cps could not be achieved.
+selector has been fixed by removing ".lower()" from the code :3 (thats coding for ya)
+- Minimum Duty cycle has been reduced from 1% to 0.1% to help with the mouse being held down for too long during sub 1s click times.
+
+# v2.1.1 - 24.02.2026 (d/m/y)
 ## 🔺 Fix:
 - CPU logging does not report 0.0% value if no samples are made (previously lowered average cpu usage artificially)
 - CPU logging frequency is dynamic, making the averages more accurate at lower runtimes.
