@@ -6,6 +6,7 @@ const version = await getVersion();
 
 export type SavedPanel = "simple" | "advanced";
 export type ExplanationMode = "off" | "text";
+export type Theme = "black" | "white";
 
 export interface Settings {
   version: string;
@@ -44,6 +45,7 @@ export interface Settings {
   lastPanel: SavedPanel;
   showStopReason: boolean;
   showStopOverlay: boolean;
+  theme: Theme;
 }
 
 export interface ClickerStatus {
@@ -96,6 +98,7 @@ export const DEFAULT_SETTINGS: Settings = {
   lastPanel: "simple",
   showStopReason: true,
   showStopOverlay: true,
+  theme: "black",
 };
 
 function sanitizeSavedPanel(value: unknown): SavedPanel {
@@ -171,6 +174,7 @@ function sanitizeSettings(input?: Partial<Settings> | null): Settings {
     disableScreenshots: false,
     explanationMode: sanitizeExplanationMode(saved),
     lastPanel: sanitizeSavedPanel(saved.lastPanel),
+    theme: saved.theme === "white" ? "white" : "black",
   };
 }
 

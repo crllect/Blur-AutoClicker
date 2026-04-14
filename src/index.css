@@ -29,6 +29,26 @@
   --radius-lg:     14px;
 }
 
+[data-theme="white"] {
+  --bg-base:       rgb(255, 255, 255);
+  --bg-surface:    hsl(0, 0%, 94%);
+  --bg-elevated:   hsl(0, 0%, 88%);
+  --bg-input:      hsl(0, 0%, 82%);
+  --bg-input-off:  hsl(0, 0%, 86%);
+
+  --border:        hsl(0, 0%, 65%);
+  --border-focus:  hsl(0, 0%, 45%);
+  --border-subtle: hsl(0, 0%, 75%);
+
+  --text-primary:  hsla(0, 0%, 0%, 1);
+  --text-muted:    hsla(0, 0%, 0%, 0.5);
+  --text-dim:      hsla(0, 0%, 0%, 0.3);
+
+  --accent-green:  hsla(129, 77%, 30%, 0.9);
+  --accent-yellow: hsla(41, 99%, 35%, 0.9);
+  --accent-red:    hsla(4, 100%, 45%, 0.9);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

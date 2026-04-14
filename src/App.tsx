@@ -290,6 +290,10 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = settings.theme ?? "black";
+  }, [settings.theme]);
+
   const handleTabChange = (nextTab: Tab) => {
     setTab(nextTab);
 
