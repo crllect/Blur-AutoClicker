@@ -40,30 +40,20 @@ function getPanelSize(tab: Tab, settings: Settings, hasUpdate: boolean) {
     : { width: 800, height: 650 + extra };
 }
 
-function getTextScaleFactor(): number {
-  // Windows text scaling (Accessibility → Text size) changes the browser's
-  // base font size independently of the display DPI scale. We detect it by
-  // measuring how tall 1rem actually renders — default is 16px, so any larger
-  // value means text scaling is active.
-  const probe = document.createElement("div");
-  probe.style.cssText =
-    "position:absolute;visibility:hidden;width:1rem;height:1rem";
-  document.body.appendChild(probe);
-  const remPx = probe.offsetHeight;
-  document.body.removeChild(probe);
-  return remPx > 0 ? remPx / 16 : 1;
-}
-
 async function getClampedPanelSize(size: { width: number; height: number }) {
   const monitor = await currentMonitor();
   if (!monitor) {
     return size;
   }
 
-  const scale = monitor.scaleFactor || 1;
-  const textScale = getTextScaleFactor();
-  const workAreaWidth = Math.floor(monitor.workArea.size.width / scale);
-  const workAreaHeight = Math.floor(monitor.workArea.size.height / scale);
+  const dpiScale = monitor.scaleFactor || 1;
+  // window.devicePixelRatio includes both the display DPI scale and any
+  // additional zoom WebView2 applies for Windows text scaling. Dividing out
+  // the DPI scale isolates the text zoom factor so we can resize the window
+  // to match the actual rendered content size.
+  const textScale = window.devicePixelRatio / dpiScale;
+  const workAreaWidth = Math.floor(monitor.workArea.size.width / dpiScale);
+  const workAreaHeight = Math.floor(monitor.workArea.size.height / dpiScale);
   const horizontalMargin = 24;
   const verticalMargin = 24;
 
