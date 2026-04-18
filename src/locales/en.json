@@ -35,6 +35,8 @@
     "averageCpu": "CPU Usage avg",
     "sessions": "Sessions",
     "noRuns": "No runs recorded yet",
+    "clearStats": "Clear Stats",
+    "clearStatsDescription": "Permanently delete all locally stored usage data.",
     "alwaysOnTop": "Always on Top",
     "alwaysOnTopDescription": "Keep the app pinned above other windows.",
     "stopHitboxOverlay": "Stop Hitbox Overlay",

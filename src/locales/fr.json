@@ -35,6 +35,8 @@
     "averageCpu": "Utilisation CPU moy.",
     "sessions": "Sessions",
     "noRuns": "Aucune exécution enregistrée",
+    "clearStats": "Effacer les stats",
+    "clearStatsDescription": "Supprimer définitivement toutes les données d'utilisation stockées localement.",
     "alwaysOnTop": "Toujours au premier plan",
     "alwaysOnTopDescription": "Garde l'application au-dessus des autres fenêtres.",
     "stopHitboxOverlay": "Superposition de zone d'arrêt",

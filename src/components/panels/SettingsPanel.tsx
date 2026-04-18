@@ -493,6 +493,23 @@ export default function SettingsPanel({
         ) : (
           <div className="stats-empty">{t("settings.noRuns")}</div>
         )}
+        {hasStats && (
+          <div className="settings-row">
+            <div className="settings-label-group">
+              <span className="settings-label">{t("settings.clearStats")}</span>
+              <span className="settings-sublabel">
+                {t("settings.clearStatsDescription")}
+              </span>
+            </div>
+            <button
+              type="button"
+              className="settings-btn-danger settings-btn-danger--compact"
+              onClick={() => setPendingAction("clear-stats")}
+            >
+              {t("settings.clearStats")}
+            </button>
+          </div>
+        )}
 
         <div className="settings-divider" />
 

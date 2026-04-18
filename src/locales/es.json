@@ -35,6 +35,8 @@
     "averageCpu": "Uso medio de CPU",
     "sessions": "Sesiones",
     "noRuns": "Aún no hay ejecuciones registradas",
+    "clearStats": "Borrar estadísticas",
+    "clearStatsDescription": "Eliminar permanentemente todos los datos de uso almacenados localmente.",
     "alwaysOnTop": "Siempre encima",
     "alwaysOnTopDescription": "Mantiene la app fijada por encima de otras ventanas.",
     "stopHitboxOverlay": "Superposición de zona de parada",

@@ -35,6 +35,8 @@
     "averageCpu": "متوسط استخدام المعالج",
     "sessions": "الجلسات",
     "noRuns": "لا توجد تشغيلات مسجلة بعد",
+    "clearStats": "مسح الإحصاءات",
+    "clearStatsDescription": "حذف جميع بيانات الاستخدام المخزنة محلياً بشكل دائم.",
     "alwaysOnTop": "البقاء في المقدمة",
     "alwaysOnTopDescription": "يبقي التطبيق فوق النوافذ الأخرى.",
     "stopHitboxOverlay": "طبقة منطقة الإيقاف",
